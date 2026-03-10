@@ -4,7 +4,7 @@ from EmotionDetection.emotion_detection import emotion_detector
 app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
-def emotion_detector():
+def emo_detector():
     text_to_analyse = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyse)
     dominant_emotion = response['dominant_emotion']
